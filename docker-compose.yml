@@ -1,0 +1,10 @@
+version: "3.6"
+services:
+  diardi:
+    tty: true
+    build: .
+    container_name: diardi
+    network_mode: "host"
+    volumes:
+      - ./:/Diardi
+  
