@@ -15,10 +15,11 @@ WORKDIR /root
 COPY start.sh start.sh
 RUN chmod +x start.sh
 
-EXPOSE 22821 22822
+EXPOSE 22821-22822
 
 # CMD ["./scalad --testnet"]
 # CMD ["./scala-wallet-cli --testnet"]
 
-# ENTRYPOINT ["bash"]
-ENTRYPOINT ["bash" , "start.sh"]
+ENTRYPOINT ["bash"]
+# ENTRYPOINT ["bash", "./scalad --testnet"]
+# ENTRYPOINT ["bash" , "start.sh"]

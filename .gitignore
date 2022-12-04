@@ -3,3 +3,5 @@ scratch
 configs
 
 data/
+*.keys
+*.address.txt
