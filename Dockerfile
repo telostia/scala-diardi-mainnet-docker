@@ -12,8 +12,8 @@ RUN wget https://github.com/scala-network/Scala/releases/download/v7.9.2/scala-v
 
 WORKDIR /root
 
-COPY start.sh start.sh
-RUN chmod +x start.sh
+COPY start.sh /root/start.sh
+RUN chmod +x /root/start.sh
 
 EXPOSE 22821-22822
 

@@ -14,11 +14,11 @@ remove:
 wallet:
 	docker exec -it diardi ./scala-wallet-cli --testnet
 wallet-backup:
-	docker cp diardi:$n.address.txt .
-	docker cp diardi:$n.keys .
+	docker cp diardi:/root/$n.address.txt .
+	docker cp diardi:/root/$n.keys .
 wallet-copy:
-	docker cp $n.address.txt diardi:$n.address.txt
-	docker cp $n.keys diardi:$n.keys
+	docker cp $n.address.txt diardi:/root/$n.address.txt
+	docker cp $n.keys diardi:/root/$n.keys
 # bash
 bash:
 	docker exec -it diardi bash
