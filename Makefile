@@ -8,6 +8,8 @@ stop:
 	docker-compose stop
 scalad:
 	docker exec -it diardi ./scalad --testnet
+scalad-spend:
+	docker exec -it diardi ./scalad --testnet  --spendkey $(spend)
 remove:
 	docker-compose rm -f
 # wallet commands

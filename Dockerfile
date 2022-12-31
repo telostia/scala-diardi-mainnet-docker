@@ -5,9 +5,11 @@ RUN apt update -y && apt install -y build-essential cmake git libssl-dev wget un
 
 WORKDIR /root
 
+ENV VERSION="v7.9.3"
+
 # RUN mkdir -p /Diardi && cd /Diardi && \
-RUN wget https://github.com/scala-network/Scala/releases/download/v7.9.2/scala-v7.9.2-linux-x64.zip \
-  && unzip scala-v7.9.2-linux-x64.zip
+RUN wget https://github.com/scala-network/Scala/releases/download/${VERSION}/scala-${VERSION}-linux-x64.zip \
+  && unzip scala-${VERSION}-linux-x64.zip
 # RUN rm scala-v7.9.2-linux-x64.zip
 
 WORKDIR /root

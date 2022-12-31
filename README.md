@@ -7,10 +7,10 @@ Steps to take, type the following order:
 2. ```cd scala-diardi-testnet-docker```
 3. ```make build```
 4. ```make up ```
-5. ```make scalad``` (this will open up a window for the scalad daemon)
-6. Open new terminal for wallet then type
+5. ```make scalad-spend spend=<copy your spend key here>``` (ignore the < > for e.g make scalad-spend spend=xx779xxxxxxxxxxxxxxxxxxxxxxxxx, this will open up a window for the scalad daemon)
+6. Open new terminal and in the same folder for wallet then type
 7. ```make wallet``` (if first time running, you have to either create a new wallet then backup seeds or use
- ``make wallet-copy`` command to already backuped wallet in current folder. For more info, refer to full list of commands )
+ ``make wallet-copy n=<your wallet name here>`` command to already backuped wallet in current folder. For more info, refer to full list of commands )
 
 Full list of commands:
 * ```make build``` : builds docker
