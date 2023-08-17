@@ -1,1 +1,1 @@
-./scalad --testnet
+./scalad

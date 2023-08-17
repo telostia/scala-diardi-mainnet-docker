@@ -1,10 +1,10 @@
-## Diardi testnet docker
+## Diardi mainnet docker
 
 ### How To Use
 
 Steps to take, type the following order:
-1. ```git clone https://github.com/telostia/scala-diardi-testnet-docker.git```
-2. ```cd scala-diardi-testnet-docker```
+1. ```git clone https://github.com/telostia/scala-diardi-mainnet-docker.git```
+2. ```cd scala-diardi-mainnet-docker```
 3. ```make build```
 4. ```make up ```
 5. ```make scalad-spend spend=<copy your spend key here>``` (ignore the < > for e.g make scalad-spend spend=xx779xxxxxxxxxxxxxxxxxxxxxxxxx, this will open up a window for the scalad daemon)
@@ -14,9 +14,14 @@ Steps to take, type the following order:
 
 Full list of commands:
 * ```make build``` : builds docker
-* ```make up```    : runs docked in detached mode
+* ```make up```    : runs docker in detached mode
 * ```make stop```  : stops docker from running
 * ```make remove```: deletes docker container
+
+* ```make scalad-spend spend=<copy your spend key here>``` : runs the daemon with specified spend key
+
+* ```scalad-mining spend=<copy your spend key here> threads=<enter how many threads your cpu will mine with>``` : runs the daemon with mining using
+    the specified spend key {this is want you want to do for the automated process of running diardi}
 
 * ```make wallet```: loads up scala-wallet-cli (note: first time building docker will have to create wallet,
  after that can load created wallet file)

@@ -3,7 +3,7 @@ services:
   diardi:
     tty: true
     build: .
-    container_name: diardi
+    container_name: diardi_mainnet
     network_mode: "host"
     volumes:
       - ./:/Diardi

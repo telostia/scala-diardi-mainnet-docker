@@ -7,21 +7,23 @@ up:
 stop:
 	docker-compose stop
 scalad:
-	docker exec -it diardi ./scalad --testnet
+	docker exec -it diardi_mainnet ./scalad
 scalad-spend:
-	docker exec -it diardi ./scalad --testnet  --spendkey $(spend)
+	docker exec -it diardi_mainnet ./scalad --spendkey $(spend)
+scalad-mining:
+	docker exec -it diardi_mainnet ./scalad --spendkey $(spend) --start-mining $(threads)
 remove:
 	docker-compose rm -f
 # wallet commands
 wallet:
-	docker exec -it diardi ./scala-wallet-cli --testnet
+	docker exec -it diardi_mainnet ./scala-wallet-cli
 wallet-backup:
-	docker cp diardi:/root/$n.address.txt .
-	docker cp diardi:/root/$n.keys .
+	docker cp diardi_mainnet:/root/$n.address.txt .
+	docker cp diardi_mainnet:/root/$n.keys .
 wallet-copy:
-	docker cp $n.address.txt diardi:/root/$n.address.txt
-	docker cp $n.keys diardi:/root/$n.keys
+	docker cp $n.address.txt diardi_mainnet:/root/$n.address.txt
+	docker cp $n.keys diardi_mainnet:/root/$n.keys
 # bash
 bash:
-	docker exec -it diardi bash
+	docker exec -it diardi_mainnet bash
 .PHONY: build up-silent up stop remove scalad wallet wallet-backup wallet-copy bash
