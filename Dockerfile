@@ -5,7 +5,7 @@ RUN apt update -y && apt install -y build-essential cmake git libssl-dev wget un
 
 WORKDIR /root
 
-ENV VERSION="v8.0.0"
+ENV VERSION="v8.0.2"
 
 # RUN mkdir -p /Diardi && cd /Diardi && \
 RUN wget https://github.com/scala-network/Scala/releases/download/${VERSION}/scala-${VERSION}-x86_64-unknown-linux-gnu.zip \
