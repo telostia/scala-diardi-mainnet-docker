@@ -11,7 +11,7 @@ scalad:
 scalad-spend:
 	docker exec -it diardi_mainnet ./scalad --spendkey $(spend)
 scalad-mining:
-	docker exec -it diardi_mainnet ./scalad --spendkey $(spend) --start-mining $(threads)
+	docker exec -it diardi_mainnet ./scalad --spendkey $(spend) --start-mining $(wallet) --mining-threads $(threads)
 remove:
 	docker-compose rm -f
 # wallet commands

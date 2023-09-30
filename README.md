@@ -20,7 +20,7 @@ Full list of commands:
 
 * ```make scalad-spend spend=<copy your spend key here>``` : runs the daemon with specified spend key
 
-* ```scalad-mining spend=<copy your spend key here> threads=<enter how many threads your cpu will mine with>``` : runs the daemon with mining using
+* ```make scalad-mining spend=<copy your spend key here> wallet=<your wallet address here> threads=<enter how many threads your cpu will mine with>``` : runs the daemon with mining using
     the specified spend key {this is want you want to do for the automated process of running diardi}
 
 * ```make wallet```: loads up scala-wallet-cli (note: first time building docker will have to create wallet,
